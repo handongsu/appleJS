@@ -33,3 +33,20 @@ desc.substring(5,2);    //둘 다 "cde"
 
 "a".codePointAt(0); //97
 String.fromCodePoint(97) //"a"
+
+let userList = [
+    {name: "Mike", age: 30},
+    {name: "Tom", age: 10},
+    {name: "kevin", age: 20},
+    {name: "Harry", age: 50},
+    {name: "Steve", age: 40},
+];
+
+// 나이가 30이상
+let result = userList.reduce((acc, cur) =>{
+     if(cur.age >= 30){
+        acc.push(cur.name);
+    }
+    return acc;
+},[]);  
+// 누산 초기값 : [] -> ["Mike"]
